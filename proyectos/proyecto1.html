@@ -1,0 +1,44 @@
+---
+layout: project  # Asegúrate de que exista un layout llamado 'project'
+title: "Predicción de Pérdida de Clientes para Empresa de Telecomunicaciones Interconnect"
+description: "Este proyecto pronostica la tasa de cancelación de clientes para Interconnect, buscando identificar usuarios propensos a abandonar el servicio."
+date: 2024-11-04
+---
+
+## Descripción del Proyecto
+
+El objetivo principal de este proyecto es pronosticar la tasa de cancelación de clientes para la empresa de telecomunicaciones Interconnect. Se busca identificar a los usuarios propensos a abandonar el servicio para ofrecerles incentivos, como códigos promocionales y planes especiales. A través del uso de datos históricos, se desarrolló un modelo de aprendizaje automático que permite a la empresa implementar estrategias de retención más efectivas.
+
+## Metodología
+
+### Limpieza de Datos
+- Se importaron las bibliotecas necesarias y se cargaron los datos.
+- Durante la fase de limpieza, se revisaron los datos en busca de valores faltantes y se eliminaron o imputaron según fuera necesario.
+- Se realizaron transformaciones para asegurar que los datos estuvieran en un formato adecuado para el análisis.
+
+### Exploración Inicial de los Datos
+- Se llevó a cabo un análisis exploratorio de datos (EDA) para entender la distribución de las variables y su relación con la variable objetivo, EndDate, que indica si un cliente ha cancelado su servicio.
+
+### Ingeniería de Características
+- Se aplicaron técnicas de ingeniería de características para extraer información valiosa de los datos demográficos, el uso de servicios y los detalles de los contratos de los clientes.
+- Esto incluyó la creación de variables derivadas y la transformación de variables categóricas en numéricas.
+
+### Modelado y Entrenamiento
+- Se entrenaron múltiples modelos de machine learning, incluidos:
+  - Regresión Logística
+  - Árboles de Decisión
+  - Random Forest
+  - Gradient Boosting Machines (CatBoost)
+  - XGBoost
+  - Support Vector Machine (SVM)
+
+El mejor desempeño se logró con el modelo SVM, utilizando los hiperparámetros `C=10`, `max_iter=2000`, `probability=True`, y `random_state=54321`.
+
+### Evaluación del Modelo
+El modelo SVM mostró resultados prometedores con una precisión general (accuracy) del 75.26% y un AUC-ROC de 0.8121. Esto indica que el modelo tiene una buena capacidad para discriminar entre los clientes que probablemente cancelarán su servicio y aquellos que no lo harán.
+
+## Conclusiones
+La implementación del modelo permitirá a Interconnect identificar proactivamente a los clientes en riesgo de cancelación, facilitando la adopción de estrategias específicas de retención. Esto puede reducir significativamente la pérdida de clientes y minimizar la pérdida de ingresos. Las métricas de evaluación muestran que el modelo está bien posicionado para mejorar la tasa de retención de clientes y aumentar la rentabilidad mediante el uso de técnicas avanzadas de análisis de datos.
+
+## Enlaces
+- [Repositorio en GitHub](https://github.com/melissa9608/customer-_churn_prediction_model)
